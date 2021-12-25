@@ -1,0 +1,33 @@
+textarea{
+  width:49%;
+  height:100%;
+}
+
+html, body,div {
+  height: 100%;
+}
+
+div{
+  margin-bottom:10px;
+}
+
+#head{
+  height: auto;
+}
+#content{
+  margin-top:30px;
+}
+
+#buttons{
+  align-content: center;
+  background-color:#e6e9eb;
+  height:auto;
+  text-align: center;
+  margin:auto;
+
+  position: fixed;
+  left:0;
+  right: 0;
+  top:0;
+  bottom: auto;
+}

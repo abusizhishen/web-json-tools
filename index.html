@@ -2,72 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
-  <script>
-    var rel;
-    var rel;
-
-    document.getElementsByTagName("textarea").scrollTop = document.getElementsByTagName("textarea").scrollHeight
-
-    var lastContent = "";
-
-    function prettyPrint() {
-      var data = lel.value;
-      if (data === ""){
-        return
-      }
-      var obj = JSON.parse(data);
-      rel.value = JSON.stringify(obj, undefined, 4);
-      save(el.value);
-    }
-    window.onload= load
-    function save(content) {
-      localStorage.setItem("lastContent", content);
-
-    }
-    function load(){
-      lel = document.getElementById('leftText')
-      rel = document.getElementById('rightText')
-      lastContent = localStorage.getItem("lastContent");
-      if (lastContent){
-        lel.value = lastContent
-        rel.value = lastContent
-      }
-    }
-  </script>
+  <title>json工具</title>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
 <div width="100%" align="center" id="head">
-  <button onclick="clearContent()">清空</button>
-  <button>压缩</button>
-  <button>复制</button>
+  <div id="buttons">
+    <button onclick="clearContent()">清空</button>
+    <button onclick="compress()" >压缩</button>
+    <button onclick="copy()">复制</button>
+  </div>
 </div>
-<div width="100%" align="center">
+<div width="100%" align="center" id="content">
   <label for="leftText"></label>
   <textarea id="leftText" onchange="prettyPrint()"></textarea>
   <label for="rightText"></label>
   <textarea id="rightText" ></textarea>
 </div>
 </body>
-<script>
-  function clearContent(){
-    console.log("click")
-    lel.value = "";
-    rel.value = "";
-  }
-</script>
-<style>
-  textarea{
-    width:49%;
-    height:100%;
-  }
-
-  html, body,div {
-    height: 100%;
-  }
-
-  #head{
-    height: auto;
-  }
-</style>
 </html>
