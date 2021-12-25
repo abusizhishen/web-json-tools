@@ -11,14 +11,16 @@
   <div id="buttons">
     <button onclick="clearContent()">清空</button>
     <button onclick="compress()" >压缩</button>
+    <button onclick="prettyPrint()" >格式化</button>
     <button onclick="copy()">复制</button>
   </div>
 </div>
 <div width="100%" align="center" id="content">
   <label for="leftText"></label>
-  <textarea id="leftText" onchange="prettyPrint()"></textarea>
+  <textarea id="leftText" onchange="prettyPrint()" ></textarea>
   <label for="rightText"></label>
-  <textarea id="rightText" ></textarea>
+  <textarea id="rightText" disabled></textarea>
+  <input type="hidden" id="forCopy">
 </div>
 </body>
 </html>

@@ -54,7 +54,12 @@ function formatJson(content){
 }
 
 function copy(){
+  el = document.getElementById("forCopy")
+  el.value = rel.value
+  rel.disabled = false;
+
   rel.select()
   document.execCommand('copy')
   document.execCommand('copy')
+  rel.disabled = true;
 }
