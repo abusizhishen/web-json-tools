@@ -7,7 +7,7 @@ function clearContent(){
 
 
 var rel;
-var rel;
+var lel;
 
 document.getElementsByTagName("textarea").scrollTop = document.getElementsByTagName("textarea").scrollHeight
 
@@ -29,19 +29,19 @@ function prettyPrint() {
 
   }
 }
-//window.onload= load
+window.onload= load
 function save(content) {
   localStorage.setItem("lastContent", content);
 }
 function load(){
   lel = document.getElementById('leftText')
   rel = document.getElementById('rightText')
-  lastContent = localStorage.getItem("lastContent");
-  if (lastContent){
-    content = formatJson(lastContent)
-    lel.value = lastContent
-    rel.value = content
-  }
+  // lastContent = localStorage.getItem("lastContent");
+  // if (lastContent){
+  //   content = formatJson(lastContent)
+  //   lel.value = lastContent
+  //   rel.value = content
+  // }
 }
 
 function compress() {
