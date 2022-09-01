@@ -21,7 +21,7 @@ function prettyPrint() {
   try{
     content = formatJson(data)
     rel.value = content
-    save(data);
+    //save(data);
   }
   catch (e) {
     console.log(e)
@@ -29,7 +29,7 @@ function prettyPrint() {
 
   }
 }
-window.onload= load
+//window.onload= load
 function save(content) {
   localStorage.setItem("lastContent", content);
 }
